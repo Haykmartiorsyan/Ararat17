@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+            {% block header %}
+            <!-- Page Header -->
+            <section class="page_header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="text-uppercase">Recipies</h2>
+                            <p>Tomato is a delicious restaurant website template</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% endblock %}
+
+            {% block contnet %}
+            <!-- Recipe Content -->
+            <section class="recipie-single single-recipe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="single-recipe-carousel">
+
+                                {% for photo in photos %}
+                                <div>
+                                    <img class="img-responsive" src="{{ photo.image.url }}" alt="">
+                                </div>
+                                {% endfor %}
+
+
+                            </div>
+                            <div class="single-recipe-carousel-nav">
+
+                                {% for photo in photos %}
+                                <div>
+                                    <img class="img-responsive" src="{{ photo.image.url }}" alt="">
+                                </div>
+                                {% endfor %}
+
+                            </div>
+
+                            <div class="clearfix"></div>
+
+                        </div>
+                        <div class="col-md-7">
+                            <h3>{{ recipe.name }}</h3>
+                            <p>{{ recipe.short_description }}</p>
+                            <div class="ingredients">
+                                <h4 class="title">Price: ${{ recipe.price }}</h4>
+                            </div>
+                            <h3 class="heading-bottom-line">Descriptions</h3>
+                            <p>{{ recipe.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- subscribe -->
+            <section class="subscribe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Subscribe</h1>
+                            <p>Get updates about new dishes and upcoming events</p>
+                            <form class="form-inline" action="php/subscribe.php" id="invite" method="POST">
+                                <div class="form-group">
+                                    <input class="e-mail form-control" name="email" id="address" type="email" placeholder="Your Email Address" required>
+                                </div>
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% endblock %}

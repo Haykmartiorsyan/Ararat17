@@ -1,0 +1,96 @@
+     {%load static%}
+        <!-- Footer-->
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <h1>About us</h1>
+                            <p>Armenia is one of the oldest civilizations in the world with earliest mentions dating back to 2300 BC, the time when the legendary character “HAYK” established the Armenian nation at the crossroads between the Middle East, Europe and Asia. The capital city, Yerevan ...</p>
+                            <a href="{%url 'about:about' %}">Read more &rarr;</a>
+                        </div>
+
+                        <div class="col-md-4  col-sm-6">
+
+                        </div>
+
+
+                        <div class="col-md-4  col-sm-6">
+                            <h1>Reach us</h1>
+                            <div class="footer-social-icons">
+                                <a href="https://web.facebook.com/ararat17/" target="_blank">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="https://www.yelp.com/biz/ararat-17-matthews-2" target="_blank">
+                                    <i class="fa fa-yelp"></i>
+                                </a>
+                            </div>
+                            <div class="footer-address">
+                                <a href="https://www.google.com/maps/place/1361+Chestnut+Ln,+Matthews,+NC+28104/@35.0686092,-80.7031866,17z/data=!3m1!4b1!4m5!3m4!1s0x885425c84c07796d:0xf0b3897f8cddbca9!8m2!3d35.0686011!4d-80.7010178" target="_blank">
+                                    <p><i class="fa fa-map-marker"></i>1361 Chestnut Lane, Matthews, North Carolina 28104</p>
+                                </a>
+                                <p><i class="fa fa-phone"></i>Phone: (704)-684-0107</p>
+                                <p><i class="fa fa-envelope-o"></i>info@ararat17.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer - Copyright -->
+                <div class="footer-copyrights">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p><i class="fa fa-copyright"></i> 2017. Ararat 17 .All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+        </div>
+        <!-- Javascript -->
+        <script src="{%static 'js/vendor/jquery-1.11.2.min.js' %}"></script>
+        <script src="{%static 'js/vendor/bootstrap.min.js' %}"></script>
+        <script src="{%static 'js/vendor/jquery.flexslider-min.js' %}"></script>
+        <script src="{%static 'js/vendor/spectragram.js' %}"></script>
+        <script src="{%static 'js/vendor/owl.carousel.min.js' %}"></script>
+        <script src="{%static 'js/vendor/velocity.min.js' %}"></script>
+        <script src="{%static 'js/vendor/velocity.ui.min.js' %}"></script>
+        <script src="{%static 'js/vendor/bootstrap-datepicker.min.js' %}"></script>
+        <script src="{%static 'js/vendor/bootstrap-clockpicker.min.js' %}"></script>
+        <script src="{%static 'js/vendor/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{%static 'js/vendor/isotope.pkgd.min.js' %}"></script>
+        <script src="{%static 'js/vendor/slick.min.js' %}"></script>
+        <script src="{%static 'js/vendor/wow.min.js' %}"></script>
+        <script src="{%static 'js/animation.js' %}"></script>
+        <script src="{%static 'js/vendor/vegas/vegas.min.js' %}"></script>
+        <script src="{%static 'js/vendor/jquery.mb.YTPlayer.js' %}"></script>
+        <script src="{%static 'js/vendor/jquery.stellar.js' %}"></script>
+        <script src="{%static 'js/main.js' %}"></script>
+        <script src="{%static 'js/vendor/mc/jquery.ketchup.all.min.js' %}"></script>
+        <script src="{%static 'js/vendor/mc/main.js' %}"></script>
+        <script src="{%static 'js/vendor/map.js' %}"></script>
+
+
+     <script>
+         $(document).ready(function(){
+            $("#intro3 .home").vegas({
+            slides: [
+            {%for slide in slider %}
+            {src: "/media/{{slide.image}}"},
+            {%endfor%}
+            ]
+        });
+
+         });
+     </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{%extends 'Restaurant/base/page-base.html'%}
+
+
+{%block content%}
+{%load static %}
+ <!-- Page Header -->
+            <section class="page_header" style="background: url('/static/img/header/about.jpg') no-repeat center top;background-size: cover;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="text-uppercase wow fadeInDown">About us</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- About -->
+            <section class="about2">
+                <div class="container">
+                    <div class="row wow fadeInUp">
+                        <div class="col-md-5">
+                            <img src="{%static 'img/arpics/aboutthumb.png' %}" class="img-responsive" alt="" />
+                        </div>
+                        <div class="col-md-7 text-left">
+                            <h2 class="text-left">Our Story</h2>
+                            <p class="black">Armenia</p>
+                            <p>Armenia is one of the oldest civilizations in the world with earliest mentions dating back to 2300 BC, the time when the legendary character “HAYK” established the Armenian nation at the crossroads between the Middle East, Europe and Asia. The capital city, Yerevan was founded in 782 BC, predating Rome by almost 30 years and is one of the oldest cities in the world still in existence. Armenia is also known as the first Christian nation. In 301 AD, more than 1700 years ago, Armenia became the first country to adopt Christianity as its state religion.</p>
+                            <p class="black">Ararat</p>
+                            <p>Ararat is the biblical mountain in the Armenian Highlands where, according to the Bible (Genesis 8:4), Noah’s ark landed after the great flood, marking the rebirth of human civilization. The area has been the heartland of Armenian history, the location of many Armenian capitals and a fair number of decisive battles. Ararat is also a national symbol of Armenia despite the fact that it’s now in Turkish territory.</p>
+                            <p class="black">The Armenian diaspora and The Genocide</p>
+                            <p>In 1915, 1.5 million Armenians fell victim to systematic annihilation by the Ottoman Empire, modern day Turkey, in what became known as the Armenian Genocide.
+In search of safety, Armenians spread all over the world forming communities in almost every country. Currently there are estimated to be 13 million Armenians in the world and only about twenty percent of them live in Armenia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{%endblock%}

@@ -1,0 +1,69 @@
+{%extends 'Restaurant/base/with-slider.html'%}
+
+
+{%block content%}
+{%load static%}
+<div class="main-wrapper">
+            <!-- About page-->
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-header wow fadeInDown">
+                                <h1>our restaurant</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row wow fadeInUp">
+                        <div class="col-md-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12 hidden-sm about-photo">
+                                        <div class="image-thumb">
+                                            <img src="{%static 'img/arpics/arthumb1.png' %}" data-mfp-src="{%static 'img/arpics/arthumb1.png' %}" class="img-responsive" alt="logo">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 about-photo hidden-xs">
+                                        <img src="{%static 'img/arpics/arthumb2.png' %}" data-mfp-src="{%static 'img/arpics/arthumb2.png' %}" class="img-responsive" alt="logo">
+                                    </div>
+                                    <div class="col-sm-6 about-photo hidden-xs">
+                                        <img src="{%static 'img/arpics/arthumb3.png' %}" data-mfp-src="{%static 'img/arpics/arthumb3.png' %}" class="img-responsive" alt="logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                Being the first Armenian restaurant in Charlotte, Ararat17 is proud to introduce a mix of Armenian, Middle Eastern and Mediterranean cuisines to the Queen City and surrounding areas.  Our promise is to deliver a quality dining experience to each one of our guests using the freshest of ingredients while bringing the full flavor of said cuisines.
+                            </p>
+                            <br>
+                            <p>
+                                The rich selection of wines, along with a wide variety of liquor choices make up our eye-catching bar, ready to compliment the dish of your choice.  Our semi-sweet pomegranate house wine from Armenia has a tartness and sweetness that enriches the naturally winy taste of pomegranate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section class="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-header wow fadeInDown">
+                                <h1 class="white">Catering</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                                    <h4 class="text-uppercase white">Let us cater your next event! Click <a
+                                            href="{%url 'catering:catering' %}">here</a> for more info.</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{%endblock%}

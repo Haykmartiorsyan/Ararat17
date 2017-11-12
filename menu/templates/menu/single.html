@@ -1,0 +1,66 @@
+{%extends 'Restaurant/base/page-base.html'%}
+
+
+{%block content%}
+{%load static%}
+ <!-- Page Header -->
+            <section class="page_header" style="background: url('/static/img/header/menu.jpg') no-repeat center top;background-size: cover;">
+
+            </section>
+
+
+            <!-- Shop Content -->
+            <section class="shop-content" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="single-shop-carousel">
+                                {%for img in product.images.all%}
+                                <div>
+                                    <img class="img-responsive" src="/media/{{img.image}}" alt="">
+                                </div>
+                                {%endfor%}
+                            </div>
+                            <div class="single-shop-carousel-nav">
+                                {%for img in product.images.all%}
+                                <div>
+                                    <img class="img-responsive" src="/media/{{img.image}}" alt="">
+                                </div>
+                                {%endfor%}
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="col-md-6 shop-single-info">
+                            <div class="shop-single-title">
+                                <h3 class="text-left">{{product.name}}</h3>
+                            </div>
+                            <div class="shop-single-price">
+                                <div class="ssp pull-left">${{product.price}}</div>
+                            </div>
+                            <p>{{product.short_description}}</p>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!--<div class="shop-products">-->
+                        <!--<h6>More Food Items</h6>-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-md-3 col-sm-6">-->
+                                <!--<div class="product-info">-->
+                                    <!--<div class="product-img">-->
+                                        <!--<img src="{% static 'img/shop/1.png' %}" alt="" />-->
+                                    <!--</div>-->
+                                    <!--<h4><a href="{%url 'menu:single-item' pk=product.id %}">Food Name</a></h4>-->
+                                    <!--<div class="product-price">$100</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+            </section>
+
+
+
+{%endblock%}

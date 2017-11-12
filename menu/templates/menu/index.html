@@ -1,0 +1,64 @@
+{%extends 'Restaurant/base/page-base.html'%}
+
+
+{%block content%}
+{%load static%}
+ <!-- Page Header -->
+            <section class="page_header" style="background: url('/static/img/header/menu.jpg') no-repeat center top;background-size: cover;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="text-uppercase wow fadeInDown">Menu</h2>
+                            <p class="wow fadeInUp">See what we have in our menu list</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- menu-->
+            <section class="menu menu2">
+                <div class="container">
+                    <div class="food-menu wow fadeInUp">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="menu-tags4">
+                                    <span data-filter="*" class="tagsort4-active">All</span>
+                                    {%for cat in categories%}
+                                    <span data-filter=".{{cat.name}}">{{cat.name}}</span>
+                                    {%endfor%}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row menu-items4">
+                            {%for product in products%}
+                            <div class="menu-item4 col-sm-4 col-xs-12
+                              {%for cat in product.productcategory.all%}
+                              {{cat.name}}
+                              {%endfor%}">
+                                <div class="menu-info">
+                                    {%for img in product.images.all%}
+                                    {%if img.is_main %}
+                                        <img src="/media/{{img.image}}" class="img-responsive" alt="" />
+                                    {%endif%}
+
+                                    {%endfor%}
+                                    <a href="{%url 'menu:single-item' pk=product.id %}">
+                                        <div class="menu4-overlay">
+                                            <h4>{{product.name}}</h4>
+                                            <p>{{product.short_description}}</p>
+                                            <span class="price">${{product.price}}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            {%endfor%}
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+{%endblock%}
